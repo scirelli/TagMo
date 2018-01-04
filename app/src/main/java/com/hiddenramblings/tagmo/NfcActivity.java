@@ -264,6 +264,7 @@ public class NfcActivity extends AppCompatActivity {
         nfcAdapter.disableForegroundDispatch(this);
         this.unregisterReceiver(mReceiver);
     }
+
     void listenForTags() {
         Intent intent = new Intent(this.getApplicationContext(), this.getClass());
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

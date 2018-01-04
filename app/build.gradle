@@ -1,19 +1,17 @@
 apply plugin: 'com.android.application'
-def AAVersion = '4.3.1'
+def AAVersion = '4.5.0-SNAPSHOT'
 def AndroidSupportVersion = '26.0.0'
 
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url "https://jitpack.io"
-        }
     }
 }
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    buildToolsVersion '26.0.2'
+    flavorDimensions "abi"
 
     defaultConfig {
         applicationId "com.hiddenramblings.tagmo"
@@ -33,7 +31,7 @@ android {
         fat {
             dimension "abi"
             ndk {
-                abiFilters "x86", "armeabi-v7a", "armeabi"
+                abiFilters "x86", "armeabi-v7a"
                 versionCode = 0
             }
         }
